@@ -108,6 +108,30 @@ img
     text-shadow: 2px 2px 4px #e6d2d5;
 }
 
+body {
+    font-size: 16px; /* Set a base font size for the body */
+}
+
+h1 {
+    font-size: 2em; /* Relative to the body font size */
+}
+
+h2 {
+    font-size: 1.8em; /* Relative to the body font size */
+}
+
+nav a {
+    font-size: 1.2em; /* Relative to the body font size */
+}
+
+.image-card p {
+    font-size: 1em; /* Relative to the body font size */
+}
+
+article p {
+    font-size: 1.2em; /* Relative to the body font size */
+}
+
 /* Footer */
 
 footer
