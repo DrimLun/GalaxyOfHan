@@ -192,6 +192,11 @@ html
     align-self:flex-start;
     margin:10px;
     }
+
+    .image-card p
+    {    
+    font-size: 1em;              
+    }
     
     img {
         height: auto;
