@@ -184,6 +184,15 @@ html
         font-size: 1.2em;
     }
     
+    .image-card-box
+    {
+    display:flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+    align-self:flex-start;
+    margin:10px;
+    }
+    
     img {
         height: auto;
         max-height: 200px;
@@ -192,13 +201,5 @@ html
         transform: scale(0.9); 
     }
 
-    .image-card-box
-    {
-    display:flex;
-    flex-direction:column;
-    justify-content:space-evenly;
-    align-self:flex-start;
-    height:500px;
-    margin:10px;
-    }
+
 }
