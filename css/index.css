@@ -188,11 +188,15 @@ html
     {
     display:flex;
     flex-direction:column;
-    justify-content:space-evenly;
-    align-self:flex-start;
-    margin:10px;
+    height:auto;
     }
 
+    .image-card {
+    height:100px;
+    width:100px;  
+    margin:0em 1em;
+    }
+    
     .image-card p
     {    
     font-size: 1em;              
