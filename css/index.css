@@ -191,4 +191,14 @@ html
         max-width: 100%; 
         transform: scale(0.9); 
     }
+
+    .image-card-box
+    {
+    display:flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+    align-self:flex-start;
+    height:500px;
+    margin:10px;
+    }
 }
