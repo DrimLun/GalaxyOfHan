@@ -1,3 +1,47 @@
+body
+{
+    background-color:#f8f4ed;
+    margin:0;
+}
+
+/* Navigation Menu */
+nav a
+{
+    text-decoration:none;
+    font-size:2em;
+    color:#f9ecc3;
+}
+
+.navc, nav a
+{
+    width:100%;
+    display:flex;
+    flex-flow:row;
+    justify-content:space-evenly;
+}
+
+nav{
+    display:flex;
+    flex-flow:row;
+    justify-content:space-evenly;
+    background-color:#862617;
+    margin:0;
+    height:2.8em;
+}
+
+nav a:hover
+{
+    text-decoration: underline;
+    color:#f9ecc3;
+}
+
+.navc
+{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
 /* Headers */
 header h1, header h2
 {
@@ -78,4 +122,77 @@ button:hover
 {
     font-size:1.5em;
     text-indent:1em;
+}
+
+/* Footer */
+footer
+{
+    width: 100%;
+    color:#c4d7d6;
+    background-color: #862617;
+    text-align: center;
+    padding: 10px;
+}
+
+footer a, small
+{
+    color:#fffefa;
+    text-decoration:none;
+}
+
+footer a:hover
+{
+    text-decoration:underline;
+}
+
+/* Fade In */
+html
+{
+    opacity: 0;
+    animation: fadeIn 0.7s ease-in forwards;
+    }
+    
+    @keyframes fadeIn {
+    from {
+    opacity: 0;
+    }
+    to {
+    opacity: 1;
+    }
+}
+
+@media screen and (max-width:800px) {
+    h1 {
+        font-size: 2em;
+    }
+    
+    #gamediv p
+    {
+        font-size:1em;
+        text-indent:0.5em;
+    }
+
+    nav a {
+        font-size: 1.2em;
+    }
+
+    .navc {
+        margin: 5px;
+    }
+    
+    img {
+        height: auto;
+        max-height: 200px;
+        width: auto; 
+        max-width: 100%; 
+        transform: scale(0.7); 
+    }
+
+    .option-button, #next-question
+    {
+
+        font-size:auto;
+        height:50px;
+        width:100px;
+    }
 }
