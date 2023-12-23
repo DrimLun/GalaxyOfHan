@@ -130,7 +130,7 @@ html
 
     .option-button, #next-question
     {
-        font-size:auto;
+        font-size:0.5em;
         height:50px;
         width:100px;
 
