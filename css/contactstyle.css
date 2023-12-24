@@ -4,36 +4,11 @@ body
     margin:0;
 }
 
-/* Navigation Menu */
-nav a
-{
-    text-decoration:none;
-    font-size:2em;
-    color:#f9ecc3;
-}
-
-.navc, nav a
-{
-    width:100%;
-    display:flex;
-    flex-flow:row;
-    justify-content:space-evenly;
-}
-
-nav{
-    display:flex;
-    flex-flow:row;
-    justify-content:space-evenly;
-    background-color:#862617;
-    margin:0;
-    height:2.8em;
-}
-
-nav a:hover
+/* nav a:hover
 {
     text-decoration: underline;
     color:#f9ecc3;
-}
+} */
 
 .navc
 {
@@ -68,11 +43,6 @@ form
     align-items:center;
 }
 
-/* label
-{
-
-} */
-
 input
 {
     width:35%;
@@ -105,44 +75,6 @@ input[type="submit"]:hover
 #contact_php
 {
     height:400px;
-}
-
-/* Footer */
-
-footer
-{
-    background-color:#862617;
-    text-align:center;
-    padding: 10px;
-}
-
-footer a, small
-{
-    color:#fffefa;
-    text-decoration:none;
-}
-
-footer a:hover
-{
-    text-decoration:underline;
-}
-
-
-
-/* Fade In */
-html
-{
-    opacity: 0;
-    animation: fadeIn 0.7s ease-in forwards;
-    }
-    
-    @keyframes fadeIn {
-    from {
-    opacity: 0;
-    }
-    to {
-    opacity: 1;
-    }
 }
 
 @media screen and (max-width:800px) {

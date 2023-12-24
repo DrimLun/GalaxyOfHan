@@ -32,8 +32,8 @@ nav{
 
 nav a:hover
 {
-    background-color: #15231b;
-    color:#c3d7df;
+    background-color:#5c2223;
+    color:#f8f4ed;
 }
 
 .navc
@@ -66,6 +66,11 @@ h1{
 #title
 {
     margin:8em 0em;
+}
+
+#HanTitle
+{
+    font-weight:normal;
 }
 
 /* image cards */
@@ -114,7 +119,7 @@ h1{
     color:#35333c;        
     font-size: 2em;        
     font-weight: bold;        
-    text-shadow: 2px 2px 4px #e6d2d5;
+    /* text-shadow: 2px 2px 4px #e6d2d5; */
 }
 
 h2 {
@@ -131,7 +136,10 @@ footer
 {
     background-color: #862617;
     text-align: center;
-    padding: 10px;
+    padding: 10px 0em;
+    width:100%;
+    position:relative;
+    bottom:0em;
 }
 
 footer a, small
@@ -212,5 +220,17 @@ html
         width: auto; 
         max-width: 100%; 
         transform: scale(0.9); 
+    }
+}
+
+@media screen and (max-width:500px) {
+    /* Styles for screens with a maximum width of 400px */
+    h1 {
+        font-size: 2em;
+    }
+
+    #title
+    {
+        margin:2em 0em;
     }
 }
