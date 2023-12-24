@@ -1,25 +1,25 @@
 // Questions collection
 const questions = [
     {
-        question: "<p>Which ethnicity has the 鳳冠(Phoenix Crown)? Korean or Chinese?</p>",
+        question: "<p>Which ethnicity has the 鳳冠(Phoenix Crown)? Korean or Han漢?</p>",
         picture: '<img src="images/Q1.jpg" alt="Question1">',
         options: '<button class="option-button">Korean</button> <button class="option-button">Chinese</button>',
         answer: "Chinese",
         explanation: 'Only Chinese has 鳳冠(FengGuan). The Chinese has a saying "鳳冠霞帔 (FengGuan XiaPei)" , which is a set of wedding attire for brides.'
     },
     {
-        question: "<p>Is this headwear Korean or Chinese?</p>",
+        question: "<p>Is this headwear Korean or Han漢?</p>",
         picture: '<img src="images/Q2.jpg" alt="Question2">',
         options: '<button class="option-button">Korean</button> <button class="option-button">Chinese</button> <button class="option-button">Both</button>',
         answer: "Both",
         explanation: 'Both of them adopted this type of headwear, in the portrait it is the Chinese version. It is called 官帽(GuanMao) and was worn by ranked officials and ministers during Ming and Joseon dynasty.</p> <p>官帽 is a type of 幞頭 and 幞頭 has many variations, it could have a non-east asian origin.</p>'
     },
     {
-        question: "<p>Which one is Chinese?</p>",
+        question: "<p>Which one is Han漢?</p>",
         picture: '<img src="images/Q3-1.jpg" alt="Question3-1"> <img src="images/Q3-2.jpg" alt="Question3-2">',
         options: '<button class="option-button">Left</button> <button class="option-button">Right</button>',
         answer: "Right",
-        explanation: 'The Korean hat is generally called "gat(갓) ". The Chinese hat is named 大帽(DaMao) or 圓帽(YuanMao).'
+        explanation: 'The Chinese hat is named 大帽(DaMao) or 圓帽(YuanMao).'
     },
     {
         question: "<p>Which one is Korean?</p>",
@@ -29,7 +29,7 @@ const questions = [
         explanation: 'The Korean hat is generally called "gat(갓) ". The Chinese hat is named "大帽(DaMao)" or "圓帽(YuanMao)".'
     },
     {
-        question: "<p>Which one is Chinese?</p>",
+        question: "<p>Which one is ZhongGuo(k)?</p>",
         picture: '<img src="images/Q5-1.jpg" alt="Question5-1"> <img src="images/Q5-2.jpg" alt="Question5-2">',
         options: '<button class="option-button">Left</button> <button class="option-button">Right</button> <button class="option-button">Both</button>',
         answer: "Both",
@@ -46,8 +46,8 @@ const questions = [
         question: "<p>Which country is this ceremony from?</p>",
         picture: '<img src="images/Q7.jpg" alt="Question7">',
         options: '<button class="option-button">Japan</button> <button class="option-button">Ryuku</button>',
-        answer: "No",
-        explanation: 'The Chouhaiokishiki, or Imperial Court New Year\'s morning ceremony conducted by the king during the Ryukyu Kingdom era was held at Shurijo Castle Park in Naha, Okinawa on January 2, 2017. Source: Ryuku Shimpo'
+        answer: "Ryuku",
+        explanation: 'The Chouhaiokishiki(朝拝御規式), or Imperial Court New Year\'s morning ceremony conducted by the king during the Ryukyu Kingdom era was held at Shurijo Castle Park in Naha, Okinawa on January 2, 2017. Source: Ryuku Shimpo'
     },
     {
         question: "<p>Which armor is Japanese?</p>",
@@ -62,6 +62,14 @@ const questions = [
         options: '<button class="option-button">Left</button> <button class="option-button">Right</button>',
         answer: "Right",
         explanation: 'During the late Joseon dynasty (late 19<super>th</super> century), Koreans wear their belt on chest level.'
+    },
+    {
+        question: "<p>Which painting depicts ZhongGuo(k) emperor?</p>",
+        picture: '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/MingMuzong1.jpg/800px-MingMuzong1.jpg" alt="Question8"> <img src="https://herohanbok.files.wordpress.com/2020/03/ps01001001_don002_2017_0510144810123_don002590-00-00.jpg?w=594" alt="Question8">',
+        options: '<button class="option-button">Left</button> <button class="option-button">Right</button>',
+        answer: "Left",
+        explanation: 'Ming明 dynasty emperor\'s robe has 12 symbol ornaments, see <a href="https://en.wikipedia.org/wiki/Twelve_Ornaments">Twelve Ornaments 十二章紋</a>'
+        // https://bkimg.cdn.bcebos.com/pic/43a7d933c895d143598e3e897bf082025baf07a4?x-bce-process=image/resize,m_lfit,w_536,limit_1/quality,Q_70
     }
 ];
 
