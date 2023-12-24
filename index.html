@@ -1,4 +1,4 @@
-<!-- Author: Sim Yuan Hee
+<!-- Author: Drim Lun
 Description: A social platform for sharing and learning Han（漢） Culture
 Date: November 23 2023 -->
 
@@ -8,10 +8,13 @@ Date: November 23 2023 -->
     <head>
         <meta charset="utf-8">
         <title>Galaxy of Han 維天有漢</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name = "author" content = "Sim Yuan Hee">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"">
+        <meta name = "author" content = "Drim Lun">
         <link rel="stylesheet" href="css/index.css">
         <link rel="icon" type="image/png" href="images/Q2.jpg">
+        <meta name="robots" content="index, follow">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     </head>
 
     <body>
@@ -25,7 +28,7 @@ Date: November 23 2023 -->
 
             <section id = "title">
                 <h1>GALAXY OF HAN</h1>
-                <h1>維天有漢</h1>
+                <h1 id="HanTitle">維天有漢</h1>
             </section>
         </header>  
 
@@ -35,10 +38,10 @@ Date: November 23 2023 -->
                 <p>About</p>
             </div>
 
-            <div class="image-card" onclick="location.href='forum.php'">
+            <!-- <div class="image-card" onclick="location.href='forum.php'">
                 <img src="images/forum.jpg" alt="Forum">
                 <p>Forum</p>
-            </div>
+            </div> -->
 
             <div class="image-card" onclick="location.href='minigames.html'">
                 <img src="images/minigames.png" alt="Mini-games">
@@ -59,5 +62,14 @@ Date: November 23 2023 -->
                 <small>Partial rights reserved &copy; GALAXY OF HAN</small>
             </footer>
         </div>
+
+        <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "url": "https://radiant-pony-c58b3d.netlify.app/",
+              "name": "Han Nyi",
+            }
+            </script>
     </body>
 </html>

@@ -1,7 +1,3 @@
-<!-- Author: Sim Yuan Hee
-Description: A social platform for sharing and learning East Asian Culture
-Date: November 23 2023 -->
-
 <?php
     // Connect to mysql
     try 
