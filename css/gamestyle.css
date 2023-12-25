@@ -104,11 +104,16 @@ button:hover
         margin: 5px;
     }
     
+    #gamediv
+    {
+        height:700px;
+        margin:1em;
+    }
+
     img {
         height: auto;
         max-height: 200px;
         width: auto; 
-        max-width: 100%; 
         transform: scale(0.7); 
     }
 
@@ -116,5 +121,13 @@ button:hover
     {
         font-size:0.8em;
         margin:0.5em;
+    }
+
+    .dim
+    {
+        height:300px;
+        width:70%;
+        position:absolute;
+        top:25%;
     }
 }
