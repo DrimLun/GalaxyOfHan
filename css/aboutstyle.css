@@ -7,6 +7,7 @@ header h1, header h2
 
 h1
 {
+    margin:2em 0em 0em 0em;
     font-size:4em;
     font-family: Arial, Helvetica, sans-serif;
     color: #333;
@@ -27,7 +28,7 @@ article
     align-items:center;
     justify-content:center;
 
-    margin: 0em 1em;
+    margin: 0em 5em;
 }
 
 article p
@@ -36,6 +37,7 @@ article p
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     line-height:normal;
     text-indent:2em;
+    text-align:center;
 
     margin:0.6em;
 }
@@ -57,30 +59,35 @@ article p
 @media screen and (max-width:800px) {
     /* Styles for screens with a maximum width of 400px */
     h1 {
-        font-size: 2em;
-    }
-    
-    h2 {
-        font-size: 1.8em;
+        font-size: 2.5em;
     }
 
-    nav a {
-        font-size: 1.2em;
+    h2 
+    {
+        font-size:2em;
     }
 
-    .navc {
-        margin: 5px;
+    article
+    {
+        height:max-content;
+        margin:1em;
     }
 
     article p {
         font-size: 1.2em;
     }
     
+    #about_images
+    {
+        margin:1em;
+
+        display:flex;
+        flex-flow:row wrap;
+    }
+
     img {
-        height: auto;
+        height:auto;
         max-height: 200px;
-        width: auto; 
-        max-width: 100%; 
-        transform: scale(0.9); 
+        width:max-content; 
     }
 }
