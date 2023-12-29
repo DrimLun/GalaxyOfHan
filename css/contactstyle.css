@@ -35,6 +35,8 @@ form
     display:flex;
     flex-flow:column nowrap;
     align-items:center;
+
+    margin:0 1em;
 }
 
 input
@@ -81,10 +83,14 @@ form p
     .navc {
         margin: 5px;
     }
-
-    article p {
-        font-size: 1.2em;
-    }
     
+    form
+    {
+        flex-flow:column wrap;
+    }
 
+    form p
+    {
+        font-size:1.5em;
+    }
 }

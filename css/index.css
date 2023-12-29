@@ -225,8 +225,18 @@ html
         margin:2em 0em;
     }
 
+    .image-card-box
+    {
+        height:min-content;
+        margin:2em 0em 4em 0em;
+    }
+
     .image-card img 
     {
         max-height: 150px;
+    }
+
+    nav a {
+        font-size: 0.8em;
     }
 }

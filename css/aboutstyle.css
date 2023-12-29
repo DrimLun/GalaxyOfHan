@@ -79,7 +79,8 @@ article p
         flex-flow:row wrap;
     }
 
-    img {
+    img 
+    {
         height:auto;
         max-height: 200px;
         width:max-content; 
