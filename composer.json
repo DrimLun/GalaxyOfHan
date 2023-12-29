@@ -1,6 +1,6 @@
 {
     "name": "galaxy-of-han/my-php-project",
     "description": "Server-side validation for Galaxy Of Han",
-    "require": {},
-    "license": "AGPL-3.0-or-later"
+    "license": "MIT",
+    "require": {}
 }
