@@ -69,7 +69,7 @@ h1{
 
 #HanTitle
 {
-    font-weight:normal;
+    font-weight:500;
 }
 
 /* image cards */
@@ -91,7 +91,7 @@ h1{
     
     height:275px;
     width:275px;
-    margin:0em 1em;
+    /* margin:0em 1em; */
 
     border-style:none;
     border-radius:20px;
@@ -100,7 +100,7 @@ h1{
 .image-card img
 {
     flex:2;
-    height: 300px;;
+    /* height:300px;; */
     width:250px;
 
     border-style:none;
@@ -116,9 +116,9 @@ h1{
 {
     color:#35333c;        
     font-size: 2em;        
-    font-weight: bold;     
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;   
-    /* text-shadow: 2px 2px 4px #e6d2d5;
+    font-weight:600;   
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue';   
+    /* text-shadow: 2px 2px 4px #e6d2d5; */
     margin:0em;
 }
 
