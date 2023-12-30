@@ -7,7 +7,6 @@ header h1, header h2
 }
 
 /* Game Window */
-
 #gamediv
 {
     height:1000px;
@@ -130,8 +129,7 @@ button:hover
 {
     img 
     {
-        height: auto;
-        max-height:280px;
-        max-width:200px; 
+        max-height:200px;
+        max-width:140px; 
     }
 }

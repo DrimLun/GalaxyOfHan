@@ -21,7 +21,8 @@ nav a
     justify-content:space-evenly;
 }
 
-nav{
+nav
+{
     display:flex;
     flex-flow:row;
     justify-content:space-evenly;
@@ -165,8 +166,8 @@ html
 }
 
 /* Media Query */
-@media screen and (max-width:800px) {
-    /* Styles for screens with a maximum width of 400px */
+@media screen and (max-width:800px) 
+{
     h1 {
         font-size: 3em;
     }
@@ -214,8 +215,8 @@ html
     }
 }
 
-@media screen and (max-width:500px) {
-    /* Styles for screens with a maximum width of 400px */
+@media screen and (max-width:500px) 
+{
     h1 {
         font-size: 2em;
     }
@@ -237,6 +238,11 @@ html
     }
 
     nav a {
-        font-size: 0.8em;
+        font-size: 1em;
+    }
+
+    footer a
+    {
+        font-size:1em;
     }
 }
