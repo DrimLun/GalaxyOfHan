@@ -241,8 +241,8 @@ html
         font-size: 1em;
     }
 
-    footer a
+    small
     {
-        font-size:1em;
+        font-size:0.8em;
     }
 }
