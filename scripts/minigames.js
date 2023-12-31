@@ -3,16 +3,16 @@ const questions = [
     {
         question: "<p>Which ethnicity has the 鳳冠(Phoenix Crown)? Korean or Han漢?</p>",
         picture: '<img src="images/Q1.jpg" alt="Question1">',
-        options: '<button class="option-button">Korean</button> <button class="option-button">Chinese</button>',
-        answer: "Chinese",
+        options: '<button class="option-button">Korean</button> <button class="option-button">Han漢</button>',
+        answer: "Han漢",
         explanation: 'Only Chinese has 鳳冠(FengGuan). The Chinese has a saying "鳳冠霞帔 (FengGuan XiaPei)" , which is a set of wedding attire for brides.'
     },
     {
         question: "<p>Is this headwear Korean or Han漢?</p>",
         picture: '<img src="images/Q2.jpg" alt="Question2">',
-        options: '<button class="option-button">Korean</button> <button class="option-button">Chinese</button> <button class="option-button">Both</button>',
-        answer: "Both",
-        explanation: 'Both of them adopted this type of headwear, in the portrait it is the Chinese version. It is called 官帽(GuanMao) and was worn by ranked officials and ministers during Ming and Joseon dynasty.</p> <p>官帽 is a type of 幞頭 and 幞頭 has many variations, it could have a non-east asian origin.</p>'
+        options: '<button class="option-button">Korean</button> <button class="option-button">Han漢</button> <button class="option-button">Both</button>',
+        answer: "Han漢",
+        explanation: 'Both of them adopted this type of headwear, but Korean borrowed it from Han漢 Culture. \bThe portrait it is the Chinese version. It is called 官帽(GuanMao) and was worn by ranked officials and ministers during Ming dynasty.</p> <p>官帽 is a type of 幞頭 and 幞頭 has many variations, it could have a non-east asian origin.</p>'
     },
     {
         question: "<p>Which one is Han漢?</p>",
@@ -29,7 +29,7 @@ const questions = [
         explanation: 'The Korean hat is generally called "gat(갓) ". The Chinese hat is named "大帽(DaMao)" or "圓帽(YuanMao)".'
     },
     {
-        question: "<p>Which one is ZhongGuo(k)?</p>",
+        question: "<p>Which one is China?</p>",
         picture: '<img src="images/Q5-1.jpg" alt="Question5-1"> <img src="images/Q5-2.jpg" alt="Question5-2">',
         options: '<button class="option-button">Left</button> <button class="option-button">Right</button> <button class="option-button">Both</button>',
         answer: "Both",
@@ -64,7 +64,7 @@ const questions = [
         explanation: 'During the late Joseon dynasty (late 19<super>th</super> century), Koreans wear their belt on chest level.'
     },
     {
-        question: "<p>Which painting depicts ZhongGuo(k) emperor?</p>",
+        question: "<p>Which painting depicts ZhongGuo emperor?</p>",
         picture: '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/MingMuzong1.jpg/800px-MingMuzong1.jpg" alt="Question8"> <img src="https://herohanbok.files.wordpress.com/2020/03/ps01001001_don002_2017_0510144810123_don002590-00-00.jpg?w=594" alt="Question8">',
         options: '<button class="option-button">Left</button> <button class="option-button">Right</button>',
         answer: "Left",
@@ -75,14 +75,23 @@ const questions = [
 
 let lastQuestionIndex = -1;
 
+let gameInProgress = true;
+
+let yadayada;
+let randomQuestion;
+const optionButtons = document.getElementsByClassName("option-button");
+
 // Function to randomly select a question
-function getRandomQuestion() {
+function getRandomQuestion() 
+{
     let randomIndex;
     
     // Ensure the next question is different from the last one
-    do {
+    do 
+    {
         randomIndex = Math.floor(Math.random() * questions.length);
-    } while (randomIndex === lastQuestionIndex);
+    } 
+    while (randomIndex === lastQuestionIndex);
 
     // Update the last question index
     lastQuestionIndex = randomIndex;
@@ -91,17 +100,20 @@ function getRandomQuestion() {
 }
 
 // Function to start the game
-function startGame() {
+function startGame() 
+{
+    gameInProgress = true;
+    
     const questionElement   = document.getElementById("question");
     const picture           = document.getElementById("pictures");
-    const answerButtons     = document.getElementById("options");
+    const buttonsDiv        = document.getElementById("options");
     const gameResult        = document.getElementById("game_result");
 
     //Reset the display
     gameResult.innerHTML = "";
     undim(gameResult);
 
-    // Get a random question
+    // Get a random question, getRandomQuestion() returns an element of the dictionary
     const randomQuestion        = getRandomQuestion();
 
     // Display the question
@@ -111,46 +123,103 @@ function startGame() {
     picture.innerHTML           = randomQuestion.picture;
 
     // Display the options as buttons
-    answerButtons.innerHTML     = randomQuestion.options;
+    buttonsDiv.innerHTML        = randomQuestion.options;
 
     // Add event listeners to the option buttons
     const optionButtons = document.getElementsByClassName("option-button");
-    for (const button of optionButtons) 
+    // for (const button of optionButtons) 
+    // {
+    //     button.addEventListener("click", 
+    //     function()
+    //     {
+    //         checkAnswer(button.textContent, randomQuestion.answer, randomQuestion.explanation);
+    //     }
+    //     );
+    // }
+
+    for (button of optionButtons)
     {
-        button.addEventListener("click", 
-        function ()
-        {
-            checkAnswer(button.textContent, randomQuestion.answer, randomQuestion.explanation);
-        }
-        );
+        optionOnOff(button, button.textContent, randomQuestion.answer, randomQuestion.explanation)
     }
 }
 
-// Function to check the answer
+// Function to show the result
 function checkAnswer(userAnswer, correctAnswer, explanation) 
 {
     gameResult            = document.getElementById("game_result");
+    // dim(gameResult);
 
+    if (userAnswer == correctAnswer)
+    {
+        var result = "Correct!";
+    }
+    else
+    {
+        var result = "Wrong";
+    }
+    
     //Showing game result
-    gameResult.innerHTML += `<p>Your guess: ${userAnswer}</p><p>Correct answer: ${correctAnswer}</p><p>${explanation}</p>`;
+    gameResult.innerHTML += `<p style="font-weight:bold; font-size:3em">${result}</p><p>${explanation}</p>`;
 
     // Add button that starts a new round
     gameResult.innerHTML += '<button id="next-question" onclick=startGame()>Next Question</button>';
 
-
     dim(gameResult);
+
+    gameInProgress = false;
 }
 
 //Function to style game_result and dim background
 function dim(gameResult)
 {
+    gameInProgress = false;
+
     gameResult.classList.add('dim');
+    document.querySelector("nav").classList.add("nav-not-dimmed");
+
+    if (gameInProgress == false)
+    {
+        const randomQuestion        = getRandomQuestion();
+        const buttonsDiv            = document.getElementById("options");
+        // Display the closed options
+        buttonsDiv.innerHTML        = randomQuestion.options;
+
+        const closedAnswerButtons                                   = randomQuestion.options;
+        document.getElementsByClassName("option-button").innerHTML  = closedAnswerButtons;
+    }
+
+    const body = document.querySelector("body");
+
+    // for (const body of bodies) 
+    body.addEventListener("click", 
+    {function ()
+    {
+        undim(gameResult);
+    }
+    }   
+    );
 }
 
 //Function to remove style of game_result
 function undim(gameResult)
 {
     gameResult.classList.remove('dim');
+    document.querySelector("nav").classList.remove("nav-not-dimmed");
+}
+
+//Function to add or remove option button event
+function optionOnOff(button, chosenAnswer, correctAnswer, explanation) {
+    if (gameInProgress) 
+    {
+        yadayada = function () {
+            checkAnswer(chosenAnswer, correctAnswer, explanation);
+        };
+
+        button.addEventListener("click", yadayada);
+    } 
+    else if (!gameInProgress) {
+        button.removeEventListener("click", yadayada);
+    }
 }
 
 // Start the game when the page loads
