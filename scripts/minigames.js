@@ -73,7 +73,7 @@ const questions = [
     }
 ];
 
-let lastQuestionIndex = -1;
+lastQuestionIndex = -1;
 
 let gameInProgress = true;
 
@@ -159,7 +159,7 @@ function checkAnswer(userAnswer, correctAnswer, explanation)
     }
     
     //Showing game result
-    gameResult.innerHTML += `<p style="font-weight:bold; font-size:3em">${result}</p><p>${explanation}</p>`;
+    gameResult.innerHTML += `<p class="correctWrong">${result}</p><p class="explaination">${explanation}</p>`;
 
     // Add button that starts a new round
     gameResult.innerHTML += '<button id="next-question" onclick=startGame()>Next Question</button>';
